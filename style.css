@@ -1,0 +1,92 @@
+body {
+    /* Photo by Leo Fosdal on Unsplash */
+    background-image: url("bgImg.jpg");
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: snow;
+    font-weight: bold;
+}
+
+.cont {
+    padding-top:80px;
+}
+
+.logo {
+    margin-bottom: 60px;
+}
+
+.cont h1 {
+    font-family: 'Kaushan Script', cursive;
+}
+
+.load {
+    position:relative;
+}
+
+.load:before {
+    content: attr(data-text);
+    position: absolute;
+    left: 48%;    
+    overflow: hidden;
+    max-width: 7em;
+    white-space: nowrap;
+    color: white;
+    -webkit-animation-name: loading;
+    animation-name: loading 5s ease-out;
+    -webkit-animation-iteration-count: infinite;
+    animation-iteration-count:infinite;
+    font-size:20px;
+}
+
+@-webkit-keyframes loading {
+     0% {
+        max-width: 0;
+    }   
+}
+
+@keyframes loading {
+    0% {
+        max-width: 0;
+    }
+}
+
+.counter, .contact {
+    display: none;
+    margin-top:40px;
+    font-size:20px;
+}
+
+.counter span {
+    width: 60px;
+    -moz-border-radius: 100%; 
+    border-radius: 100%;
+    background-color: white;
+    color:black;
+    text-align: center;    
+    padding:10px;
+    text-shadow: 1px 1px #ff8a8a;   
+ 
+}
+
+.contact a {
+    border-radius: 50%;
+    background:#f3f3f3;
+    color:black;
+    padding:10px;
+}
+
+.contact a:hover {
+    background:#7474ff;
+    color:#45f37c;
+    -ms-transform: scale(1.4);
+    -webkit-transform: scale(1.4);
+    transform: scale(1.4);
+}
+
+@media (max-width:500px) {
+    .load:before {
+        position: absolute;
+        left:33%;
+    }
+}
